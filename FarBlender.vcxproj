@@ -157,23 +157,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="Source.def" />
+    <None Include="inc/Source.def" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FarBlender.h" />
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="plugin.hpp" />
+    <ClInclude Include="inc/FarBlender.h" />
+    <ClInclude Include="inc/plugin.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="FarBlender.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="src/dllmain.cpp" />
+    <ClCompile Include="src/FarBlender.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
